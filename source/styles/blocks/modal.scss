@@ -1,0 +1,126 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3;
+
+  &--visible {
+    display: flex;
+  }
+}
+
+.modal {
+  width: 963px;
+  height: 545px;
+  background-color: $base-gray-color;
+  position: relative;
+  padding: 24px;
+}
+
+.modal__close-button {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background: url('../../images/cross.svg') no-repeat center,
+    transparent;
+  border: none;
+  top: -36px;
+  right: -36px;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background: url('../../images/cross.svg') no-repeat center,
+      rgba(246, 244, 245, 0.1);
+  }
+
+  &:active {
+    background: url('../../images/cross.svg') no-repeat center,
+      rgba(246, 244, 245, 0.3);
+  }
+}
+
+.modal__wrapper {
+  border: 1px solid $dark-yellow-color;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 56px 166px;
+}
+
+.modal__title {
+  text-align: center;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.modal-form__wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid #4EA470;
+    right: 12px;
+    top: 12px;
+    z-index: 2;
+  }
+}
+
+.modal-form__wrapper:has(.correct)::after {
+  display: block;
+  border: 1px solid #4EA470;
+  background: url('../../images/okay.svg') center no-repeat;
+}
+
+.modal-form__wrapper:has(.incorrect)::after {
+  display: block;
+  border: 1px solid #A44E4E;
+  background: url('../../images/wrong.svg') center no-repeat;
+}
+
+.modal-form__input {
+  width: 534px;
+  height: 44px;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  padding: 14px 11px 12px;
+
+  &::placeholder {
+    font-family: $secondary-font;
+    font-size: 14px;
+    color: $disable-gray-color;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $light-yellow-color;
+  }
+
+  &:active {
+    border: 1px solid $base-white-color;
+  }
+}
+
+.modal-form__submit {
+  margin-top: 16px;
+}

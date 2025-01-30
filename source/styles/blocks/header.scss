@@ -1,0 +1,34 @@
+.header {
+  background: transparent;
+  border-bottom: 1px solid rgba(177,177,177,0.17);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.header__wrapper {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 23px 69px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  margin-top: 5px;
+}
+.header__nav {
+  margin-left: 92px;
+}
+.header__phone {
+  color: $light-yellow-color;
+  text-decoration: none;
+  margin-right: 3px;
+  margin-top: -2px;
+
+  &:hover,
+  &:focus {
+    color: $dark-yellow-color;
+    outline: none;
+  }
+}

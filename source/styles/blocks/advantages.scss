@@ -1,0 +1,100 @@
+.advantages {
+  background: url('../../images/adv-background.png') no-repeat 100% -16%,
+    $base-white-color;
+}
+
+.advantages__wrapper {
+  max-width: $desktop-width;
+  padding: 79px 70px 81px;
+  margin: 0 auto;
+}
+
+.advantages__title {
+  margin: 0 auto 21px;
+  justify-content: center;
+}
+
+.advantages__subtitle {
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 58px;
+}
+
+.advantages__item {
+  margin: 0;
+  padding: 30px 23px 25px;
+  border: 1px solid $light-gray-color;
+  width: calc((100% - 75px) / 4);
+  background-color: $base-white-color;
+
+
+  &:hover {
+    background-color: $dark-yellow-color;
+    border: 1px solid $dark-yellow-color;
+  }
+}
+
+.advantages__item--clock h4::before {
+  mask: url('../../images/clock.svg') no-repeat center;
+}
+
+.advantages__item--case h4::before {
+  mask: url('../../images/case.svg') no-repeat center;
+}
+
+.advantages__item--horse h4::before {
+  mask: url('../../images/horse.svg') no-repeat center;
+  margin-left: -1px;
+}
+
+.advantages__item--book h4::before {
+  mask: url('../../images/book.svg') no-repeat center;
+  margin-left: -1px;
+}
+
+.advantages__item:hover h4::before {
+  background-color: $base-white-color;
+}
+
+.advantages__item:hover h4,
+.advantages__item:hover p {
+  color: $base-white-color;
+}
+
+.advantages__item h4 {
+  @include title-h3;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 21px;
+    background-color: $dark-yellow-color;
+  }
+}
+
+.advantages__item p {
+  @include text-mini;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__button {
+  display: block;
+  margin: 0 auto;
+  transform: translate(-2px, 0);
+}

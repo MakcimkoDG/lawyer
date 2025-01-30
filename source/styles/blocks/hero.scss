@@ -1,0 +1,165 @@
+.hero {
+  background: url('../../images/paper-1.png') no-repeat top 88px left calc(50% + 66px),
+    url('../../images/paper-2.png') no-repeat top 301px left calc(50% + 578px),
+    url('../../images/paper-3.png') no-repeat top 144px left calc(50% + 471px),
+    url('../../images/hero-background.jpg') no-repeat center/cover,
+    #232228;
+  width: 100%;
+  position: relative;
+}
+
+.hero__wrapper {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 143px 69px 0;
+}
+
+.hero__title {
+  font-size: 56px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: $base-white-color;
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
+.hero__text {
+  font-family: $secondary-font;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $disable-gray-color;
+  margin: 0 0 52px;
+  letter-spacing: 0.3px;
+}
+
+.hero__form {
+  max-width: 593px;
+  margin: 0 0 74px;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid #4EA470;
+    background: url('../../images/okay.svg') center no-repeat;
+    left: 260px;
+    top: 57px;
+    z-index: 2;
+  }
+}
+.hero__form:has(.hero-form__input.correct)::after {
+  display: block;
+}
+
+.hero-form__legend {
+  font-family: $primary-font;
+  font-size: 16px;
+  color: $base-white-color;
+  text-transform: uppercase;
+  margin-left: -2px;
+  margin-bottom: 22px;
+  width: 100%;
+}
+
+.hero-form__input {
+  width: 298px;
+  height: 44px;
+  padding: 13px 12px 12px;
+  font-family: $secondary-font;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $disable-gray-color;
+  border: 1px solid $base-white-color;
+  margin-right: 8px;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $light-yellow-color;
+  }
+
+  &:active {
+    border: 1px solid $base-white-color;
+  }
+}
+
+.hero-form__submit {
+  background-color: transparent;
+  border: 1px solid $light-yellow-color;
+  text-transform: uppercase;
+  font-family: $primary-font;
+  font-size: 16px;
+  height: 44px;
+  padding: 6px 24px 6px 23px;
+  color: $base-white-color;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: $light-yellow-color;
+    color: $base-white-color;
+  }
+
+  &:active {
+    background: $dark-yellow-color;
+    border: 1px solid $dark-yellow-color
+  }
+
+  :disabled {
+    color: $disable-gray-color;
+    background: transparent;
+    border: 1px solid $disable-gray-color;
+  }
+}
+
+.hero__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__item {
+  padding: 38px 32px;
+  background-color: rgba(35, 34, 40, 0.62);
+  width: 302px;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.hero-item__title {
+  font-size: 40px;
+  letter-spacing: .025em;
+  line-height: 40px;
+  color: $light-yellow-color;
+}
+
+.hero-item__text {
+  font-family: $secondary-font;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $disable-gray-color;
+}
+
+.hero__image {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 22px);
+  z-index: 0;
+  filter: drop-shadow(0 0 10px rgba(164, 131, 78, 0.4));
+}

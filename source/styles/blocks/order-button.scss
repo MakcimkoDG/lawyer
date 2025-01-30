@@ -1,0 +1,30 @@
+.order-button {
+  font-family: $primary-font;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border: 1px solid $light-yellow-color;
+  background: transparent;
+  text-decoration: none;
+
+  &:visited {
+    color: $text-dark-color;
+  }
+  &:hover,
+  &:focus {
+    outline: none;
+    background: $light-yellow-color;
+    color: #ffffff;
+  }
+
+  &:active {
+    background: $dark-yellow-color;
+    border: 1px solid $dark-yellow-color
+  }
+
+  &:disabled {
+    background: transparent;
+    color: $disable-gray-color;
+    border: 1px solid $disable-gray-color;
+  }
+}

@@ -1,0 +1,36 @@
+.section-title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 200;
+  color: $disable-gray-color;
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px;
+  padding: 0;
+  letter-spacing: 0.4px;
+
+  &--stroke {
+    &::before {
+      content: "";
+      display: block;
+      width: 44px;
+      height: 1px;
+      background-color: $disable-gray-color;
+      opacity: 50%;
+      margin-right: 8px;
+    }
+  }
+}
+
+.section-subtitle {
+  font-size: 40px;
+  line-height: 52px;
+  color: $text-dark-color;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.section-subtitle strong {
+  color: $dark-yellow-color;
+}

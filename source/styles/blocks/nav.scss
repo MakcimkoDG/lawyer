@@ -1,0 +1,50 @@
+.nav__list {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.nav__item {
+  margin: 0;
+}
+
+.nav__item a {
+  font-family: $secondary-font;
+  text-decoration: none;
+  color: $disable-gray-color;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 0 27px;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    width: 24px;
+    height: 1px;
+    background-color: $light-yellow-color;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    display: block
+  }
+}
+
+.nav__item--active a {
+  color: $light-yellow-color;
+  border-bottom: 1px solid $light-yellow-color;
+  padding: 0 6.5px 27px;
+}

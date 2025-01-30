@@ -1,0 +1,81 @@
+.subscribe {
+  background-color: #f6f4f5;
+  padding: 81px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe__subtitle {
+  margin-bottom: 21px;
+}
+
+.subscribe__text {
+  margin: 0;
+  padding: 0;
+  font-family: $secondary-font;
+  letter-spacing: 0.025em;
+  font-weight: 200;
+  margin-bottom: 35px;
+}
+
+.subscribe__form {
+  max-width: 719px;
+  display: flex;
+  gap: 16px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    left: calc(50% + 130px);
+    top: 12px;
+    z-index: 2;
+  }
+}
+
+.subscribe-form__input {
+  border: 1px solid $base-white-color;
+  border-radius: 0;
+  width: 534px;
+  height: 44px;
+  padding: 14px 11px 12px;
+
+  &::placeholder {
+    font-family: $secondary-font;
+    font-size: 14px;
+    color: $disable-gray-color;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $light-yellow-color;
+  }
+
+  &:active {
+    border: 1px solid $base-white-color;
+  }
+
+}
+
+.subscribe-form__submit:disabled {
+  border: 1px solid $disable-gray-color;
+  color: $disable-gray-color
+}
+
+.subscribe__form:has(.subscribe-form__input.correct)::after {
+  display: block;
+  border: 1px solid #4EA470;
+  background: url('../../images/okay.svg') center no-repeat;
+}
+
+.subscribe__form:has(.subscribe-form__input.incorrect)::after {
+  display: block;
+  border: 1px solid #A44E4E;
+  background: url('../../images/wrong.svg') center no-repeat;
+}

@@ -1,0 +1,23 @@
+/* GLOBAL */
+@import "./common/variables.scss";
+@import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/swiper.scss";
+@import "./common/mixins.scss";
+
+/* BLOCKS */
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/section.scss";
+@import "./blocks/order-button.scss";
+@import "./blocks/quote.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/team.scss";
+@import "./blocks/brands.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/blog.scss";
+@import "./blocks/subscribe.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/modal.scss";

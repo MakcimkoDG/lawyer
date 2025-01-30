@@ -1,0 +1,78 @@
+.quote {
+  background:
+  linear-gradient(to right, #C1A569 0%, #C1A569 calc(50% - 720px), transparent calc(50% - 700px), transparent calc(50% - 344px),#FAF9FA calc(50% - 700px), #FAF9FA 100%),
+  url('../../images/quote-backgroung.jpg') no-repeat top left calc(50% - 532px),
+  $base-gray-color;
+  position: relative;
+  height: 590px;
+  overflow: hidden;
+}
+
+.quote__wrapper {
+  display: flex;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 54px 55px 0 128px;
+}
+
+.blockquote {
+  margin: 0;
+  padding: 24px 0 80px 102px;
+
+  &::before {
+    content: "“";
+    display:block;
+    font-family: $quote-font;
+    font-size: 128px;
+    color: $light-gray-color;
+    position: absolute;
+    top: 296px;
+    left: calc(50% - 199px);
+  }
+
+  &::after {
+    content: "“";
+    display:block;
+    font-family: $quote-font;
+    font-size: 128px;
+    color: $light-gray-color;
+    position: absolute;
+    top: 20px;
+    left: calc(50% + 462px);
+    transform: rotate(180deg);
+  }
+}
+.blockquote__title {
+  margin-bottom: 20px;
+}
+.blockquote__subtitle {
+  margin-bottom: 26px;
+}
+.blockquote__text {
+  @include text-normal;
+  width: 523px;
+  margin: 0 0 103px;
+  padding: 0;
+  letter-spacing: 0.025em;
+}
+
+.blockquote__author {
+  @include title-h3;
+  margin: 0;
+  margin-left: -1px;
+  margin-bottom: 9px;
+}
+
+.blockquote__post {
+  @include text-normal;
+  margin: 0;
+  color: $disable-gray-color;
+  margin-left: -1px;
+  letter-spacing: 0.19px;
+}
+
+.quote__signature {
+  position: absolute;
+  top: 334px;
+  left: calc(50% + 400px);
+}

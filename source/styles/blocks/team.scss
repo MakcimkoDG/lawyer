@@ -1,0 +1,109 @@
+.team {
+  background-color: $base-gray-color;
+  padding: 78px 0 71px 69px;
+  overflow: hidden;
+}
+
+.team__wrapper {
+  display: grid;
+  grid-template-columns: 556px 815px;
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+.team-description {
+  width: 516px;
+  padding: 26px 34px 28px 0;
+  position: relative;
+  z-index: 3;
+  background-color: $base-gray-color;
+}
+
+.team-description__subtitle {
+  margin-bottom: 27px;
+}
+
+.team-description__text {
+  @include text-normal;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 39px;
+  letter-spacing: 0.01em;
+  font-weight: 300;
+}
+
+.team-swiper {
+  width: 100%;
+  margin: 1px 0;
+}
+
+.team-swiper__list {
+  margin: 0;
+  padding: 0;
+}
+
+.team-item {
+  width: 229px;
+  display: flex;
+  gap: 20px;
+}
+
+.team-item--kirill,
+.team-item--ivan {
+  flex-direction: column;
+}
+
+.team-item--lubov,
+.team-item--anna {
+  flex-direction: column-reverse;
+  margin-top: -7px;
+}
+
+.team-item__picture {
+  background: $dark-yellow-color;
+  width: 229px;
+  height: 312px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 229px;
+    height: 312px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+  }
+}
+
+.team-item:hover .team-item__picture::before {
+  display: block;
+}
+
+.team-item--kirill:hover .team-item__picture::before {
+  background-image: url('../../images/kirill-hover.png'),
+    url('../../images/team-background.png');
+}
+
+.team-item--lubov:hover .team-item__picture::before {
+  background-image: url('../../images/lubov-hover.png'),
+    url('../../images/team-background.png');
+}
+
+.team-item__wrapper h4 {
+  @include title-h3;
+  padding: 0;
+  margin: 1px 0 9px;
+}
+
+.team-item--lubov h4,
+.team-item--anna h4 {
+  margin: 3px 0 7px;
+}
+
+.team-item__wrapper span {
+  @include text-mini;
+  color: $disable-gray-color
+}
